@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+label:not([for="book-read"]){
+    display: block;
+}
+img{
+    border-radius: 100%;
+}
+html{
+    height: 100%;
+    overflow: clip;
+    --background-color:rgb(238, 236, 236);
+    --primary-color:rgb(27, 115, 156);
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(200px,1fr) 5fr;
+    grid-template-rows: 1fr 10fr;
+}
+
+.header{
+    grid-row: 1;
+    grid-column: 2/-1;
+    background-color: var(--background-color);
+    display: flex;
+    >h1{
+        margin-left: auto;
+        align-self: center;
+    }
+    >#sign-up{
+        margin-left: auto;
+        margin-right: 20px;
+        align-self: center;
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 20px;
+    }
+    >#sign-up:hover{
+        background-color: rgb(5, 87, 126);
+    }
+}
+
+.sidebar{
+    grid-row: 1/-1;
+    background-color: rgb(27, 115, 156);
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.main-content{
+    background-color: var(--background-color);
+}
+
+
+
